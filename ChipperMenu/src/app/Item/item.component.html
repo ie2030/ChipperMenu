@@ -1,0 +1,4 @@
+<div *ngIf="!isCartItem"  class="panel panel-default col-md-12">
+    <p class="panel-body col-md-6">{{ item.name }}</p>
+    <p style="text-align: right;" class="panel-body col-md-6"><a style=" color: red" (click)="addToCart()">Price: {{ item.price.toFixed(2) }}+</a></p>
+</div>

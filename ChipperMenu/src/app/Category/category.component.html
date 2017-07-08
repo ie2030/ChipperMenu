@@ -1,0 +1,12 @@
+<div class="col-md-10 panel panel-default cat">
+    <a>
+        <h3 class="col-md-11" id="cath3" (click)="toggleDropped()">{{category.name}}</h3>
+        <span *ngIf="!dropped" class="glyphicon glyphicon-chevron-right col-md-1" style="margin-top: 20px; margin-bottom: 10px" aria-hidden="true" (click)="toggleDropped()"></span>
+        <span *ngIf="dropped" class="glyphicon glyphicon-chevron-down col-md-1" style="margin-top: 20px; margin-bottom: 10px" aria-hidden="true" (click)="toggleDropped()"></span>
+    </a>
+    
+    <div *ngIf="dropped">
+        <img [src]="category.img_url" class="foodimg"/>
+        <item *ngFor="let item of category.itemList" [item]="item"></item>
+    </div>
+</div>

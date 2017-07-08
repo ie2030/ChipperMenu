@@ -1,0 +1,16 @@
+<div id="cart" class="panel panel-default">
+    <h2>Cart</h2>
+    <p>Total Price: {{ totalPrice.toFixed(2) }}</p>
+    <cartitem *ngFor="let item of cart.items_in_cart" [item]="item"></cartitem>
+
+    <div *ngIf="totalPrice >= 5 && freeDrinkAdded===false" class="panel panel-default col-md-12" id="freeDrink">
+        <div id="cartitem-left" class="col-md-10">
+            <h3 id="cart-item-text">Free Drink!</h3>
+            <p>Since the items in your cart add up to more than &euro;5, have a free 0.33L drink!</p>
+        </div>
+        
+        <div class="col-md-2">
+            <a (click)="addFreeDrink()" class="btn btn-success">+</a>
+        </div>
+    </div>
+</div>

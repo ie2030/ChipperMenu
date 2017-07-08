@@ -1,0 +1,39 @@
+    <!-- Page Content -->
+    <nav class="navbar navbar-inverse" id="header">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Chipper Menu</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="content">
+
+        <a name="top-of-page"></a>
+
+        <div class="row col-md-8 col-sm-12">
+
+            <ul class="nav nav-pills">
+                <li class="col-md-5 mynav" [ngClass]="{'active': menuStates[0]}"><a (click)="standardMenuOn = true; menuStates[0]=true; menuStates[1]=false" href="#top-of-page"><h3>Standard Menu</h3></a></li>
+                <li class="col-md-5 mynav" [ngClass]="{'active': menuStates[1]}"><a (click)="standardMenuOn = false; menuStates[1]=true; menuStates[0]=false" href="#top-of-page"><h3>Specials</h3></a></li>
+            </ul>
+
+            <div *ngIf="standardMenuOn" id="my-scrollable">
+                <category *ngFor="let category of categories" [category]="category"></category>
+            </div>
+
+            <div *ngIf="!standardMenuOn" id="my-scrollable">
+                <special-item *ngFor="let item of specialItems" [specialItem]="item"></special-item>
+            </div>
+            
+        </div>
+        <cart class="col-md-3 col-sm-12"></cart>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>

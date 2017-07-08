@@ -1,0 +1,68 @@
+/* You can add global styles to this file, and also import other style files */
+#cart {
+    height: 600px;
+    overflow-y: auto;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: inherit;
+}
+
+#cartitem {
+    padding-top: 10px;
+}
+
+#freeDrink {
+    padding-top: 10px;
+}
+
+#cart-item-text {
+    font-size: 17px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#cartitem-left {
+    text-align: left;
+}
+
+#my-scrollable {
+    overflow-y: auto;
+    height: 100%;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: table; 
+}
+
+.mynav {
+    padding: 15px;
+}
+
+.cat {
+    margin: 15px;
+}
+
+#cath3 {
+    margin-bottom: 20px;
+}
+
+#header {
+    z-index:20;
+    height: 20px;
+    overflow:hidden;
+    width:100%;
+}
+
+#content {
+    position: relative;
+    top: 0;
+    padding-top: 20px;
+    min-height: 100%;
+    box-sizing: border-box;
+}

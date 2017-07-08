@@ -1,0 +1,22 @@
+<!--<div class="col-md-12">
+    <div class="col-md-6">
+        <h2>{{ specialItem.day }}</h2>
+        <p>Includes: {{ specialItem.items_name }}</p>
+    </div>
+    <div class="price-box col-md-3">
+        <p>Price: {{ specialItem.price.toFixed(2) }}</p>
+    </div>
+    <div class="add-box col-md-3">
+        <p>
+            <a (click)="addToCart()" class="btn btn-primary">Add to Cart</a>
+        </p>
+    </div>
+</div> -->
+
+<div class="panel panel-default col-md-12">
+    <div class="panel-body col-md-6">
+        <h2>{{ specialItem.day }}</h2>
+        <p>Includes: {{ specialItem.items_name }}</p>
+    </div>
+    <p style="text-align: right;" class="panel-body col-md-6"><a style=" color: red" (click)="addToCart()">Price: {{ specialItem.price.toFixed(2) }}+</a></p>
+</div>
